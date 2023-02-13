@@ -26,23 +26,23 @@ html {
   line-height: 1.4;
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   font-size: var(--font-size-xl);
+  font-weight: 500;
+  margin: 0;
 }
 
 h2 {
   font-size: var(--font-size-lg);
+  text-align: center;
+  margin: 1em;
 }
 
 h3 {
-  font-size: var(--font-size-xl);
-}
-
-h4 {
-  font-size: var(--font-size-lg);
-}
-
-h5 {
   font-size: var(--font-size-md);
 }
 
@@ -60,20 +60,142 @@ a {
   font-weight: 500;
 }
 
-body {
+figcaption {
+  font-style: italic;
+}
+
+.limited {
+  text-transform: uppercase;
+  font-weight: 900;
   margin: 0;
 }
 
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px #f4f4f4 solid;
 }
 
 nav ul {
+  display: flex;
+  gap: 1em;
   list-style: none;
   text-transform: uppercase;
+  margin-right: auto;
+}
+
+.logo {
+  padding: 1em 0;
+  max-width: 30%;
+  max-height: 30%;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+.product-grid-1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  padding: 2em 0;
+}
+
+.product-grid-1 img {
+  border-radius: 0.3em;
+}
+
+#product-1 {
+  grid-area: 1 / 1 / span 3 / span 3;
+}
+
+button {
+  color: #fff;
+  background-color: #000;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  font-size: var(--font-size-base);
+  border: none;
+}
+
+section {
+  padding-bottom: 2em;
+}
+.product-grid-1, .product-grid-2, .bg-story, .valentines {
+  margin: 0 1em;
+}
+
+.bg-story {
+    border-top: 3px #f4f4f4 solid;
+}
+
+.testimony {
+  padding-top: 1em;
+  background-color: #000;
+  color: #fff;
+}
+
+article {
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 0.5em;
+}
+
+article img{
+  text-align: center;
+  background-color: #888;
+  border-radius:  0.5em 0.5em 0 0;
+}
+
+.product-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+  border-top: 3px #f4f4f4 solid;
+}
+
+@media only screen and (min-width: 48em) {
+  .product-grid-1 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .product-grid-2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 3em;
+  }
+
+  #product-1 {
+    grid-area: 1 / 1;
+  }
+
+  .doughflex {
+    display: flex;
+    gap: 1em;
+  }
+
+  figure {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .val-main {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  h1 {
+    margin-top: 0.5em;
+  }
 }
